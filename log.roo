@@ -1,3 +1,38 @@
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-10-29 14:48:17
 project --topLevelPackage com.acme.presenter --projectName presenter --java 6 --packaging WAR
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-10-29 14:48:21
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-10-29 15:20:04
+jpa setup --database MYSQL --provider HIBERNATE 
+// [failed] entity jpa --class com.acme.presenter.domain.User 
+// [failed] entity jpa --class com.acme.presenter.domain.User
+entity jpa --class com.acme.presenter.domain.PresenterUser
+field email template 
+field string --fieldName firstName
+field string --fieldName lastName
+field string --fieldName userName
+field string --fieldName emailName
+field date --fieldName birthDate --type java.util.Calendar
+field boolean --fieldName enable
+entity jpa --class com.acme.presenter.domain.Adress
+field string --fieldName city
+field string --fieldName street
+field string --fieldName house
+focus --class ~.domain.PresenterUser
+field reference --fieldName adress --type ~.domain.Adress
+// [failed] enum type --class ~.domain.Role
+enum type --class ~.domain.Roles
+focus --class ~.domain.PresenterUser
+field set --type ~.domain.Roles --fieldName roles
+enum type --class ~.domain.Status
+entity jpa --class com.acme.presenter.domain.Presentation
+field enum --fieldName status --type ~.domain.Status
+field string --fieldName name 
+// [failed] entity jpa --class com.acme.presenter.domain.Element
+entity jpa --class com.acme.presenter.domain.PresentationElement
+field enum --fieldName status --type ~.domain.ElementType
+focus --class ~.domain.PresentationElement
+focus --class ~.domain.Presentation
+field set --fieldName elements --type ~.domain.PresentationElement
+web mvc setup 
+web mvc all --package com.acme.presenter.web
+enum type --class ~.domain.ElementType

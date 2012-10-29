@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_acme_presenter_domain_PresenterUser" modelAttribute="presenterUser" path="/presenterusers" render="${empty dependencies}" z="1pnMGZZKaAeOjVb2Tj/skUtpzfo=">
+        <field:input field="firstName" id="c_com_acme_presenter_domain_PresenterUser_firstName" z="5OLCgxcIfJF2APKWDjhWlN03PNs="/>
+        <field:input field="lastName" id="c_com_acme_presenter_domain_PresenterUser_lastName" z="GdzltuMWnoi5y/aibQY0Du8wzaU="/>
+        <field:input field="userName" id="c_com_acme_presenter_domain_PresenterUser_userName" z="darWYiRhOrChF/wSLiB8zZvmtL0="/>
+        <field:input field="email" id="c_com_acme_presenter_domain_PresenterUser_email" validationMessageCode="field_invalid_email" z="I1qL+GdSaoSW/jTEZghDsMJHg5s="/>
+        <field:datetime dateTimePattern="${presenterUser_birthdate_date_format}" field="birthDate" id="c_com_acme_presenter_domain_PresenterUser_birthDate" z="vnxgfNnHo6uxRYKy81M4P6991wM="/>
+        <field:checkbox field="enable" id="c_com_acme_presenter_domain_PresenterUser_enable" z="kdbAiodk6eHek/yo5BFlzvWwWSY="/>
+        <field:select field="adress" id="c_com_acme_presenter_domain_PresenterUser_adress" itemValue="id" items="${adresses}" path="/adresses" z="t6hj2kvLS7sBMorpZwfGMR2Ro+Y="/>
+        <field:select field="roles" id="c_com_acme_presenter_domain_PresenterUser_roles" items="${roleses}" path="roleses" z="dczKSs57XfsAQm+Qvi1CCWFizX0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_acme_presenter_domain_PresenterUser" render="${not empty dependencies}" z="ERQTDEfOz/Hg+60mNn14cA7f1HA="/>
+</div>
