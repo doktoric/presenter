@@ -1,0 +1,45 @@
+funkciók:
+
+-userkezelés
+-prezentácio létrehoz
+-fálok kezelése
+-editor
+-auth
+
+
+domains:
+	user:
+		-firstname
+		-lastname
+		-username
+		-email
+		-birth date
+		-adress
+		-password
+		-enable
+		-role
+	adress:
+		-city
+		-street
+		-house
+	role:
+		-admin
+		-user
+	presentetion:
+		name
+		status(open,use,convert)
+		elements
+		
+	element:
+		type
+		
+		
+	
+	
+fájlok kezelése:
+	-save
+	-export(pdf,ppt)
+	-import
+	-load
+	-edit
+
