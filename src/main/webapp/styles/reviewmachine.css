@@ -1,0 +1,252 @@
+.navy_container {
+	width: 90%;
+}
+
+.jumbotron_review_specific:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*    background: url(../images/head_back.jpg) no-repeat center center;  */
+	opacity: .6;
+}
+
+#emptyrow {
+	padding-top: 30px;
+}
+
+.jumbotron_review_specific {
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+	/*   background: #020031; Old browsers */
+	/*   background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); FF3.6+ */
+	/*   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); Chrome,Safari4+ */
+	/*   background: -webkit-linear-gradient(45deg,  #020031 0%,#6d3353 100%); Chrome10+,Safari5.1+ */
+	/*   background: -o-linear-gradient(45deg,  #020031 0%,#6d3353 100%); Opera 11.10+ */
+	/*   background: -ms-linear-gradient(45deg,  #020031 0%,#6d3353 100%); IE10+ */
+	/*   background: linear-gradient(45deg,  #020031 0%,#6d3353 100%); W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#020031',
+		endColorstr='#6d3353', GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px
+		rgba(0, 0, 0, .2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px
+		rgba(0, 0, 0, .2);
+	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px
+		rgba(0, 0, 0, .2);
+	/*           background: #4f85bb; Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	/* 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNGY4NWJiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzRmODViYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=); */
+	/* 	background: -moz-linear-gradient(45deg,  #4f85bb 0%, #4f85bb 100%); FF3.6+ */
+	/* 	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#4f85bb), color-stop(100%,#4f85bb)); Chrome,Safari4+ */
+	/* 	background: -webkit-linear-gradient(45deg,  #4f85bb 0%,#4f85bb 100%); Chrome10+,Safari5.1+ */
+	/* 	background: -o-linear-gradient(45deg,  #4f85bb 0%,#4f85bb 100%); Opera 11.10+ */
+	/* 	background: -ms-linear-gradient(45deg,  #4f85bb 0%,#4f85bb 100%); IE10+ */
+	/* 	background: linear-gradient(45deg,  #4f85bb 0%,#4f85bb 100%); W3C */
+	/* 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f85bb', endColorstr='#4f85bb',GradientType=1 ); IE6-8 fallback on horizontal gradient */
+	opacity: 0.9;
+	background: #05abe0; /* Old browsers */
+	background: -moz-linear-gradient(top, #05abe0 0%, #53cbf1 60%, #87e0fd 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #05abe0),
+		color-stop(60%, #53cbf1), color-stop(100%, #87e0fd) );
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #05abe0 0%, #53cbf1 60%, #87e0fd 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #05abe0 0%, #53cbf1 60%, #87e0fd 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #05abe0 0%, #53cbf1 60%, #87e0fd 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #05abe0 0%, #53cbf1 60%, #87e0fd 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(    startColorstr='#05abe0',
+		endColorstr='#87e0fd', GradientType=0 ); /* IE6-9 */
+}
+
+#letterpress {
+	font: normal 22px ITCAvantGarde, "Avant Garde", Avantgarde,
+		"Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 100px;
+	text-align: center;
+	letter-spacing: -4px;
+	color: #2C94DD;
+	line-height: 135%;
+	border: 0px;
+	font-weight: bold;
+	text-shadow: none !important;
+	font-style: italic;
+}
+
+.dropdown-menu .sub-menu {
+	left: 100%;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+	visibility: visible;
+	display: block;
+}
+
+.navbar .sub-menu:before {
+	border-bottom: 7px solid transparent;
+	border-left: none;
+	border-right: 7px solid rgba(0, 0, 0, 0.2);
+	border-top: 7px solid transparent;
+	left: -7px;
+	top: 10px;
+}
+
+.navbar .sub-menu:after {
+	border-top: 6px solid transparent;
+	border-left: none;
+	border-right: 6px solid #fff;
+	border-bottom: 6px solid transparent;
+	left: 10px;
+	top: 11px;
+	left: -6px;
+}
+
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135,
+		Color='#000000' );
+}
+
+.brandreview {
+	padding-right: 0;
+	padding-left: 0;
+	margin-left: 10px;
+	float: left;
+	font-weight: bold;
+	color: black;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px
+		rgba(255, 255, 255, .125) !important;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	transition: all .2s linear;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.logincontainer {
+	top: 50%;
+	height: 328px;
+	width: 838px;
+	margin: -154px 0 0 -418px;
+	position: absolute;
+	left: 50%;
+	font-family: Arial, sans-serif;
+}
+
+.loginform {
+	left: 20% !important;
+}
+
+.brandreview:hover {
+	text-decoration: none;
+}
+
+.brandreview:hover {
+	color: #999999;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.loginfooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Height of the footer */
+	background: #6cf;
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+	width: 100%;
+}
+
+#inner_footer {
+	width: 50%;
+	margin: 0px auto;
+}
+
+.campaign_status_button {
+	cursor: pointer;
+	background-color: #E6E6E6;
+	background-image: none;
+	filter: alpha(opacity =     65);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #333;
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15)
+		rgba(0, 0, 0, 0.25);
+	padding: 9px 14px;
+	font-size: 16px;
+	line-height: normal;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-left: 2px; margin-bottom : 0;
+	vertical-align: middle;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	text-decoration: none;
+	margin-bottom: 0;
+}
+
+.freeTextStyle {
+	background: transparent !important;
+}
+
+.free_text_area_style {
+	width: 100%;
+	height: 590px;
+	float: left;
+	resize: both !important;
+	max-height: 800px;
+	min-height: 200px;
+	max-width: 2000px;
+	min-width: 200px;
+	
+}
+
+
+.review-footer
+{
+	margin-top: 0px !important;
+}
+
+
+/* TABLE */
+#reviewTable {
+	margin-top: 20px !important;
+}
+
+#reviewTable>tbody>tr>td>form {
+	margin: 0 0 0px;
+}
+
+#reviewTable>tbody>tr {
+	height: 20px !important;
+}
+
+#reviewTable>tbody>tr>td {
+	padding: 3px !important;
+	padding-left: 6px !important;
+}
