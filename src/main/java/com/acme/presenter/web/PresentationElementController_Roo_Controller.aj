@@ -3,9 +3,11 @@
 
 package com.acme.presenter.web;
 
+import com.acme.presenter.domain.ElementType;
 import com.acme.presenter.domain.PresentationElement;
 import com.acme.presenter.web.PresentationElementController;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.ui.Model;
@@ -86,6 +88,7 @@ privileged aspect PresentationElementController_Roo_Controller {
     
     void PresentationElementController.populateEditForm(Model uiModel, PresentationElement presentationElement) {
         uiModel.addAttribute("presentationElement", presentationElement);
+        uiModel.addAttribute("elementtypes", Arrays.asList(ElementType.values()));
     }
     
     String PresentationElementController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
