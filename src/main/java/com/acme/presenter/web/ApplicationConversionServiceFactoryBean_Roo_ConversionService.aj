@@ -67,7 +67,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<PresentationElement, String> ApplicationConversionServiceFactoryBean.getPresentationElementToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.acme.presenter.domain.PresentationElement, java.lang.String>() {
             public String convert(PresentationElement presentationElement) {
-                return new StringBuilder().append(presentationElement.getStatus()).toString();
+                return new StringBuilder().toString();
             }
         };
     }
