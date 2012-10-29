@@ -37,3 +37,4 @@ web mvc setup
 web mvc all --package com.acme.presenter.web
 enum type --class ~.domain.ElementType
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-10-29 15:45:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-10-29 16:10:06
