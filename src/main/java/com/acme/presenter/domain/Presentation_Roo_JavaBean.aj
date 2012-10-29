@@ -3,8 +3,8 @@
 
 package com.acme.presenter.domain;
 
+import com.acme.presenter.domain.Component;
 import com.acme.presenter.domain.Presentation;
-import com.acme.presenter.domain.PresentationElement;
 import com.acme.presenter.domain.Status;
 import java.util.Set;
 
@@ -26,11 +26,11 @@ privileged aspect Presentation_Roo_JavaBean {
         this.name = name;
     }
     
-    public Set<PresentationElement> Presentation.getElements() {
+    public Set<Component> Presentation.getElements() {
         return this.elements;
     }
     
-    public void Presentation.setElements(Set<PresentationElement> elements) {
+    public void Presentation.setElements(Set<Component> elements) {
         this.elements = elements;
     }
     

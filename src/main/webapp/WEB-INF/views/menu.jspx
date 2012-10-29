@@ -19,5 +19,9 @@
             <menu:item id="i_presentationelement_new" messageCode="global_menu_new" url="/presentationelements?form" z="Qw8xbWGKFXBFdpmpOfVRG914Sy0="/>
             <menu:item id="i_presentationelement_list" messageCode="global_menu_list" url="/presentationelements?page=1&amp;size=${empty param.size ? 10 : param.size}" z="bsmNPtpPFiGztsilgQ+kzzvkBN4="/>
         </menu:category>
+        <menu:category id="c_component" z="H09agUE0W2T4MC/Yc0hxxSanepc=">
+            <menu:item id="i_component_new" messageCode="global_menu_new" url="/presentationelements?form" z="nlvC22/LglMWSHXIsb3Ye83rVOY="/>
+            <menu:item id="i_component_list" messageCode="global_menu_list" url="/presentationelements?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4gHmd8MdL6gJybcG1FaUgEFG0CI="/>
+        </menu:category>
     </menu:menu>
 </div>

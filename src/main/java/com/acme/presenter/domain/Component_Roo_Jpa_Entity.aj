@@ -3,7 +3,7 @@
 
 package com.acme.presenter.domain;
 
-import com.acme.presenter.domain.PresentationElement;
+import com.acme.presenter.domain.Component;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,32 +11,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
 
-privileged aspect PresentationElement_Roo_Jpa_Entity {
+privileged aspect Component_Roo_Jpa_Entity {
     
-    declare @type: PresentationElement: @Entity;
+    declare @type: Component: @Entity;
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Long PresentationElement.id;
+    private Long Component.id;
     
     @Version
     @Column(name = "version")
-    private Integer PresentationElement.version;
+    private Integer Component.version;
     
-    public Long PresentationElement.getId() {
+    public Long Component.getId() {
         return this.id;
     }
     
-    public void PresentationElement.setId(Long id) {
+    public void Component.setId(Long id) {
         this.id = id;
     }
     
-    public Integer PresentationElement.getVersion() {
+    public Integer Component.getVersion() {
         return this.version;
     }
     
-    public void PresentationElement.setVersion(Integer version) {
+    public void Component.setVersion(Integer version) {
         this.version = version;
     }
     

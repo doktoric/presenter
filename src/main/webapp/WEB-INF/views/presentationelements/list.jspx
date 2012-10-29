@@ -2,9 +2,9 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_com_acme_presenter_domain_PresentationElement" items="${presentationelements}" z="wGRAjzwUN8kiRO0oOMahbfsMVa8=">
-        <table:table data="${presentationelements}" id="l_com_acme_presenter_domain_PresentationElement" path="/presentationelements" z="zVtcZtLaRdeVQry9JRQNOJ3aZyY=">
-            <table:column id="c_com_acme_presenter_domain_PresentationElement_status" property="status" z="PPNNXhJUMSrO1ix9AxHr4//Z8hE="/>
+    <page:list id="pl_com_acme_presenter_domain_Component" items="${components}" z="FVQsjwqQ44n37ePsbMusymj7PBY=">
+        <table:table data="${components}" id="l_com_acme_presenter_domain_Component" path="/presentationelements" z="QBbw9DR5CZRn82zlj1tJj7Lg0vY=">
+            <table:column id="c_com_acme_presenter_domain_Component_status" property="status" z="ldkhp8Nq4mJgRyYEI9zvssX0qVo="/>
         </table:table>
     </page:list>
 </div>

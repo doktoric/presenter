@@ -3,16 +3,16 @@
 
 package com.acme.presenter.domain;
 
+import com.acme.presenter.domain.Component;
 import com.acme.presenter.domain.ElementType;
-import com.acme.presenter.domain.PresentationElement;
 
-privileged aspect PresentationElement_Roo_JavaBean {
+privileged aspect Component_Roo_JavaBean {
     
-    public ElementType PresentationElement.getStatus() {
+    public ElementType Component.getStatus() {
         return this.status;
     }
     
-    public void PresentationElement.setStatus(ElementType status) {
+    public void Component.setStatus(ElementType status) {
         this.status = status;
     }
     

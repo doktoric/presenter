@@ -3,11 +3,11 @@
 
 package com.acme.presenter.domain;
 
-import com.acme.presenter.domain.PresentationElement;
+import com.acme.presenter.domain.Component;
 import org.springframework.beans.factory.annotation.Configurable;
 
-privileged aspect PresentationElement_Roo_Configurable {
+privileged aspect Component_Roo_Configurable {
     
-    declare @type: PresentationElement: @Configurable;
+    declare @type: Component: @Configurable;
     
 }

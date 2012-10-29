@@ -3,8 +3,8 @@
 
 package com.acme.presenter.web;
 
+import com.acme.presenter.domain.Component;
 import com.acme.presenter.domain.ElementType;
-import com.acme.presenter.domain.PresentationElement;
 import com.acme.presenter.web.PresentationElementController;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
@@ -22,25 +22,25 @@ import org.springframework.web.util.WebUtils;
 privileged aspect PresentationElementController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String PresentationElementController.create(@Valid PresentationElement presentationElement, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String PresentationElementController.create(@Valid Component component, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, presentationElement);
+            populateEditForm(uiModel, component);
             return "presentationelements/create";
         }
         uiModel.asMap().clear();
-        presentationElement.persist();
-        return "redirect:/presentationelements/" + encodeUrlPathSegment(presentationElement.getId().toString(), httpServletRequest);
+        component.persist();
+        return "redirect:/presentationelements/" + encodeUrlPathSegment(component.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
     public String PresentationElementController.createForm(Model uiModel) {
-        populateEditForm(uiModel, new PresentationElement());
+        populateEditForm(uiModel, new Component());
         return "presentationelements/create";
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String PresentationElementController.show(@PathVariable("id") Long id, Model uiModel) {
-        uiModel.addAttribute("presentationelement", PresentationElement.findPresentationElement(id));
+        uiModel.addAttribute("component", Component.findComponent(id));
         uiModel.addAttribute("itemId", id);
         return "presentationelements/show";
     }
@@ -50,44 +50,44 @@ privileged aspect PresentationElementController_Roo_Controller {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
             final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
-            uiModel.addAttribute("presentationelements", PresentationElement.findPresentationElementEntries(firstResult, sizeNo));
-            float nrOfPages = (float) PresentationElement.countPresentationElements() / sizeNo;
+            uiModel.addAttribute("components", Component.findComponentEntries(firstResult, sizeNo));
+            float nrOfPages = (float) Component.countComponents() / sizeNo;
             uiModel.addAttribute("maxPages", (int) ((nrOfPages > (int) nrOfPages || nrOfPages == 0.0) ? nrOfPages + 1 : nrOfPages));
         } else {
-            uiModel.addAttribute("presentationelements", PresentationElement.findAllPresentationElements());
+            uiModel.addAttribute("components", Component.findAllComponents());
         }
         return "presentationelements/list";
     }
     
     @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
-    public String PresentationElementController.update(@Valid PresentationElement presentationElement, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String PresentationElementController.update(@Valid Component component, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, presentationElement);
+            populateEditForm(uiModel, component);
             return "presentationelements/update";
         }
         uiModel.asMap().clear();
-        presentationElement.merge();
-        return "redirect:/presentationelements/" + encodeUrlPathSegment(presentationElement.getId().toString(), httpServletRequest);
+        component.merge();
+        return "redirect:/presentationelements/" + encodeUrlPathSegment(component.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
     public String PresentationElementController.updateForm(@PathVariable("id") Long id, Model uiModel) {
-        populateEditForm(uiModel, PresentationElement.findPresentationElement(id));
+        populateEditForm(uiModel, Component.findComponent(id));
         return "presentationelements/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
     public String PresentationElementController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        PresentationElement presentationElement = PresentationElement.findPresentationElement(id);
-        presentationElement.remove();
+        Component component = Component.findComponent(id);
+        component.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/presentationelements";
     }
     
-    void PresentationElementController.populateEditForm(Model uiModel, PresentationElement presentationElement) {
-        uiModel.addAttribute("presentationElement", presentationElement);
+    void PresentationElementController.populateEditForm(Model uiModel, Component component) {
+        uiModel.addAttribute("component", component);
         uiModel.addAttribute("elementtypes", Arrays.asList(ElementType.values()));
     }
     

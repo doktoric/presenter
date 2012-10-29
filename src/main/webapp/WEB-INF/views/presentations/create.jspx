@@ -5,7 +5,7 @@
     <form:create id="fc_com_acme_presenter_domain_Presentation" modelAttribute="presentation" path="/presentations" render="${empty dependencies}" z="G8Xo3mC9G7kuYaoKN8w1Oe94c1M=">
         <field:select field="status" id="c_com_acme_presenter_domain_Presentation_status" items="${statuses}" path="statuses" z="iJUGsRRp0GjWJGA+36460QwpvUc="/>
         <field:input field="name" id="c_com_acme_presenter_domain_Presentation_name" z="jWtacRqOFFtbc0TebaWTczyrdS8="/>
-        <field:select field="elements" id="c_com_acme_presenter_domain_Presentation_elements" itemValue="id" items="${presentationelements}" multiple="true" path="/presentationelements" z="Bx+efOLVPT9HVd2udRh3qEOw8bc="/>
+        <field:select field="elements" id="c_com_acme_presenter_domain_Presentation_elements" itemValue="id" items="${components}" multiple="true" path="/presentationelements" z="SarKDLKccSngPgFJ8gbK7FXzPV0="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_acme_presenter_domain_Presentation" render="${not empty dependencies}" z="EuVCDbuUG6/9B+M5oBWRigxUm+4="/>
 </div>

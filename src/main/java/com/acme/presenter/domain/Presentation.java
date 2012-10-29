@@ -20,5 +20,5 @@ public class Presentation {
     private String name;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<PresentationElement> elements = new HashSet<PresentationElement>();
+    private Set<Component> elements = new HashSet<Component>();
 }

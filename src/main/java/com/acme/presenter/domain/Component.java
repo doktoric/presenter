@@ -8,7 +8,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class PresentationElement {
+public class Component {
 
     @Enumerated
     private ElementType status;

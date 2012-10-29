@@ -3,8 +3,8 @@
 
 package com.acme.presenter.web;
 
+import com.acme.presenter.domain.Component;
 import com.acme.presenter.domain.Presentation;
-import com.acme.presenter.domain.PresentationElement;
 import com.acme.presenter.domain.Status;
 import com.acme.presenter.web.PresentationController;
 import java.io.UnsupportedEncodingException;
@@ -89,7 +89,7 @@ privileged aspect PresentationController_Roo_Controller {
     
     void PresentationController.populateEditForm(Model uiModel, Presentation presentation) {
         uiModel.addAttribute("presentation", presentation);
-        uiModel.addAttribute("presentationelements", PresentationElement.findAllPresentationElements());
+        uiModel.addAttribute("components", Component.findAllComponents());
         uiModel.addAttribute("statuses", Arrays.asList(Status.values()));
     }
     

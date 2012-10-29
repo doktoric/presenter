@@ -3,13 +3,13 @@
 
 package com.acme.presenter.domain;
 
-import com.acme.presenter.domain.PresentationElement;
+import com.acme.presenter.domain.Component;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-privileged aspect PresentationElement_Roo_ToString {
+privileged aspect Component_Roo_ToString {
     
-    public String PresentationElement.toString() {
+    public String Component.toString() {
         return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
     

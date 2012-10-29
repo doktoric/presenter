@@ -4,8 +4,8 @@
 package com.acme.presenter.web;
 
 import com.acme.presenter.domain.Adress;
+import com.acme.presenter.domain.Component;
 import com.acme.presenter.domain.Presentation;
-import com.acme.presenter.domain.PresentationElement;
 import com.acme.presenter.domain.PresenterUser;
 import com.acme.presenter.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -40,6 +40,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Component, String> ApplicationConversionServiceFactoryBean.getComponentToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.acme.presenter.domain.Component, java.lang.String>() {
+            public String convert(Component component) {
+                return new StringBuilder().toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Component> ApplicationConversionServiceFactoryBean.getIdToComponentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.acme.presenter.domain.Component>() {
+            public com.acme.presenter.domain.Component convert(java.lang.Long id) {
+                return Component.findComponent(id);
+            }
+        };
+    }
+    
+    public Converter<String, Component> ApplicationConversionServiceFactoryBean.getStringToComponentConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.acme.presenter.domain.Component>() {
+            public com.acme.presenter.domain.Component convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Component.class);
+            }
+        };
+    }
+    
     public Converter<Presentation, String> ApplicationConversionServiceFactoryBean.getPresentationToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.acme.presenter.domain.Presentation, java.lang.String>() {
             public String convert(Presentation presentation) {
@@ -60,30 +84,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.acme.presenter.domain.Presentation>() {
             public com.acme.presenter.domain.Presentation convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Presentation.class);
-            }
-        };
-    }
-    
-    public Converter<PresentationElement, String> ApplicationConversionServiceFactoryBean.getPresentationElementToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.acme.presenter.domain.PresentationElement, java.lang.String>() {
-            public String convert(PresentationElement presentationElement) {
-                return new StringBuilder().toString();
-            }
-        };
-    }
-    
-    public Converter<Long, PresentationElement> ApplicationConversionServiceFactoryBean.getIdToPresentationElementConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.acme.presenter.domain.PresentationElement>() {
-            public com.acme.presenter.domain.PresentationElement convert(java.lang.Long id) {
-                return PresentationElement.findPresentationElement(id);
-            }
-        };
-    }
-    
-    public Converter<String, PresentationElement> ApplicationConversionServiceFactoryBean.getStringToPresentationElementConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.acme.presenter.domain.PresentationElement>() {
-            public com.acme.presenter.domain.PresentationElement convert(String id) {
-                return getObject().convert(getObject().convert(id, Long.class), PresentationElement.class);
             }
         };
     }
@@ -116,12 +116,12 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getAdressToStringConverter());
         registry.addConverter(getIdToAdressConverter());
         registry.addConverter(getStringToAdressConverter());
+        registry.addConverter(getComponentToStringConverter());
+        registry.addConverter(getIdToComponentConverter());
+        registry.addConverter(getStringToComponentConverter());
         registry.addConverter(getPresentationToStringConverter());
         registry.addConverter(getIdToPresentationConverter());
         registry.addConverter(getStringToPresentationConverter());
-        registry.addConverter(getPresentationElementToStringConverter());
-        registry.addConverter(getIdToPresentationElementConverter());
-        registry.addConverter(getStringToPresentationElementConverter());
         registry.addConverter(getPresenterUserToStringConverter());
         registry.addConverter(getIdToPresenterUserConverter());
         registry.addConverter(getStringToPresenterUserConverter());
