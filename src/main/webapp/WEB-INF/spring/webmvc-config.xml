@@ -70,6 +70,7 @@
         <value>/WEB-INF/layouts/layouts.xml</value>
         <!-- Scan views directory for Tiles configurations -->
         <value>/WEB-INF/views/**/views.xml</value>
+       
       </list>
     </property>
   </bean>
