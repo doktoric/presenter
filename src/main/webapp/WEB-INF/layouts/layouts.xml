@@ -5,19 +5,21 @@
 
 <tiles-definitions>
 
-	<definition name="default" template="/WEB-INF/layouts/default.jspx">
-		<put-attribute name="header" value="/WEB-INF/views/header.jspx" />
-		<put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
-		<put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+	<definition name="default" template="/WEB-INF/layouts/default.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
 	</definition>
 
-	<definition name="public" template="/WEB-INF/layouts/default.jspx">
-		<put-attribute name="header" value="/WEB-INF/views/header.jspx" />
+	<definition name="public" template="/WEB-INF/layouts/default.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
 
 	</definition>
 
-	<definition name="loginTemplate" template="/WEB-INF/layouts/loginTemplate.jspx">
-		<put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />
+	<definition name="loginTemplate" template="/WEB-INF/layouts/loginTemplate.jsp">
+		<put-attribute name="body" value="/WEB-INF/views/login/simpleLogin.jsp" />
+		<put-attribute name="auth"
+			value="/WEB-INF/views/login/auth.jsp" />
 	</definition>
 
 </tiles-definitions>
