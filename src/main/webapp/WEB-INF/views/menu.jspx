@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page"
-	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<jsp:root  xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"  version="2.0">
+<div  id="menu">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
+	
+	
 	<!--     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc="> -->
 	<!--         <menu:category id="c_presenteruser" z="FTYPvCaZnVajnQ7kjhVczwKm5Sc="> -->
 	<!--             <menu:item id="i_presenteruser_new" messageCode="global_menu_new" url="/presenterusers?form" z="tAd+KUxi0exmqasA4YL2/o7ZMa4="/> -->
@@ -58,3 +60,4 @@
 
 
 </div>
+</jsp:root>

@@ -1,22 +1,25 @@
-<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
 
-  <jsp:output omit-xml-declaration="yes" />
-
- 
- 
-  <spring:url value="/resources/images/favicon.ico" var="favicon" />
-  
-  <link rel="SHORTCUT ICON" href="${favicon}" />
-
-  <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
-  <c:set var="userLocale">
-    <c:set var="plocale">${pageContext.response.locale}</c:set>
-    <c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
-  </c:set>
+	<jsp:output omit-xml-declaration="yes" />
 
 
 
-  <spring:url value="/resources/scripts/jquery.min.js" var="jquery" />
+	<spring:url value="/resources/images/favicon.ico" var="favicon" />
+
+	<link rel="SHORTCUT ICON" href="${favicon}" />
+
+	<!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
+	<c:set var="userLocale">
+		<c:set var="plocale">${pageContext.response.locale}</c:set>
+		<c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
+	</c:set>
+
+
+
+	<spring:url value="/resources/scripts/jquery.min.js" var="jquery" />
 	<spring:url value="/resources/scripts/jquery.dataTables.js"
 		var="jqueryDatatable" />
 	<spring:url value="/resources/scripts/DT_bootstrap.js"
@@ -58,22 +61,23 @@
 		var="bootstrap_min_url" />
 	<spring:url value="/resources/styles/docs.css" var="docs_url" />
 	<spring:url value="/resources/styles/prettify.css" var="prettify_url" />
-	<spring:url value="/resources/styles/reviewmachine.css" var="review_machine_url" />
-	
-	
+	<spring:url value="/resources/styles/reviewmachine.css"
+		var="review_machine_url" />
+
+
 	<link rel="stylesheet" type="text/css"
 		href="${bootstrap_responsive_url}" />
-	
+
 	<link rel="stylesheet" type="text/css" href="${bootstrap_url}" />
 	<link rel="stylesheet" type="text/css" href="${review_machine_url}" />
 	<link rel="stylesheet" type="text/css" href="${docs_url}" />
 	<link rel="stylesheet" type="text/css" href="${prettify_url}" />
-	
-	
-	
+
+
+
 	<script src="${jquery}" type="text/javascript"><jsp:text/></script>
-	
-	
+
+
 	<script src="${jqueryDatatable}" type="text/javascript"><jsp:text/></script>
 	<script src="${DT_bootstrap}" type="text/javascript"><jsp:text/></script>
 
@@ -97,7 +101,7 @@
 	<script src="${bootstrap_affix}" type="text/javascript"><jsp:text/></script>
 	<script src="${bootstrap_js_url}" type="text/javascript"><jsp:text/></script>
 	<script src="${bootstrap_min_js_url}" type="text/javascript"><jsp:text/></script>
-	
-  
-  
+
+
+
 </jsp:root>
