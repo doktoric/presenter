@@ -232,21 +232,3 @@
 	margin-top: 0px !important;
 }
 
-
-/* TABLE */
-#reviewTable {
-	margin-top: 20px !important;
-}
-
-#reviewTable>tbody>tr>td>form {
-	margin: 0 0 0px;
-}
-
-#reviewTable>tbody>tr {
-	height: 20px !important;
-}
-
-#reviewTable>tbody>tr>td {
-	padding: 3px !important;
-	padding-left: 6px !important;
-}
