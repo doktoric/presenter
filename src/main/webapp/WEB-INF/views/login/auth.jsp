@@ -10,7 +10,12 @@
 		htmlEscape="false" />
 
 
-
+	<spring:url value="/auth/facebook/login"
+		var="facebook_url" />
+	<spring:url value="/auth/github/login"
+		var="github_url" />
+	<spring:url value="/resources/images/social_icons/facebook.png"
+		var="github_url" />
 	<spring:url value="/resources/images/social_icons/facebook.png"
 		var="facebook" />
 	<spring:url value="/resources/images/social_icons/google.png"
@@ -29,18 +34,18 @@
 			<div style="width: 90%; margin-left: 10px;">
 				<ul class=""> 
 					<li>
-					<a href="#" class="btn btn-mini" style="width: 95%; height: 20px;position: initial !important;">
-							<img src="${github}" class="pull-left"
-							style="width: 23px; height: 23px;" />
-					Login with Github
-					</a>
+					<form class="signin " name="f" action="${github_url}" 	method="POST">
+						<input href="#" type="submit" value="Github"  class="btn btn-mini" style="width: 95%; height: 20px;position: initial !important;">
+								
+						</input>
+					</form>
 					</li>
 					<li style="margin-top: 4px;">
-					<a href="#" class="btn btn-mini" style="width: 95%; height: 20px;position: initial !important;">
-							<img src="${facebook}" class="pull-left"
-							style="width: 23px; height: 23px;" />
-						Login with Facebook
-					</a>
+					<form class="signin " name="f" action="${facebook_url}" 	method="POST">
+						<input href="#" type="submit" value="Facebook"  class="btn btn-mini" style="width: 95%; height: 20px;position: initial !important;">
+								
+						</input>
+					</form>
 					</li>
 				</ul>
 				

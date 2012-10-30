@@ -75,7 +75,7 @@
 
 						</div>
 						<tiles:insertAttribute name="body" ignore="true" />
-						
+
 						<tiles:insertAttribute name="auth" ignore="true" />
 					</div>
 				</div>

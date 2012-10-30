@@ -1,14 +1,15 @@
-<html xmlns:jsp="http://java.sun.com/JSP/Page"
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:tiles="http://tiles.apache.org/tags-tiles"
 	xmlns:spring="http://www.springframework.org/tags"
-	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" >
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"  version="2.0">
 
 <jsp:output doctype-root-element="HTML"
 	doctype-system="about:legacy-compat" />
 
 <jsp:directive.page contentType="text/html;charset=UTF-8" />
 <jsp:directive.page pageEncoding="UTF-8" />
+
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -27,7 +28,8 @@
 	<div class="container">
 		<tiles:insertAttribute name="body" />
 	</div>
-	</div>
+	
 	
 </body>
-</html>
+
+</jsp:root>

@@ -14,6 +14,7 @@
          <intercept-url pattern="/presenterusers**" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/member/**" access="isAuthenticated()" />
         <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/auth/**" access="permitAll" />
         <intercept-url pattern="/**" access="isAuthenticated()" />
     </http>
     <!-- Configure Authentication mechanism -->
