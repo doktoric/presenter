@@ -35,26 +35,17 @@
 		</h2>
 		<form class="signup">
 			<div style="width: 90%; margin-left: 10px;">
-				<a	href="${git_auth_page}">pinaaaaa</a>
+				
 				<ul class="">
 					<li>
-						<form class="signin " name="f" action="${github_url}" method="GET">
-							<input href="#" type="submit" value="Github" class="btn btn-mini"
+						<a	href="${git_auth_page}">
+							<input href="#" type="button" value="Github" class="btn btn-mini"
 								style="width: 95%; height: 20px; position: initial !important;">
 
 							</input>
-						</form>
+						</a>
 					</li>
-					<li style="margin-top: 4px;">
-						<form class="signin " name="f" action="${facebook_url}"
-							method="GET">
-							<input href="#" type="submit" value="Facebook"
-								class="btn btn-mini"
-								style="width: 95%; height: 20px; position: initial !important;">
-
-							</input>
-						</form>
-					</li>
+					
 				</ul>
 
 

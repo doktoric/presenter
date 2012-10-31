@@ -30,7 +30,7 @@ public class GithubAccount {
 	                                  .provider(GitHubApi.class)
 	                                  .apiKey("1bbec341e648577faabe")
 	                                  .apiSecret("68cb0e75ba753690da2c27e813e4c65df097f2be")
-	                                  .callback("http://kocapp.appspot.com/callback")
+	                                  .callback("http://localhost:8080/presenter/auth/github/login")
 	                                  .build();
 	    Scanner in = new Scanner(System.in);
 
